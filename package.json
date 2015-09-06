@@ -1,0 +1,28 @@
+{
+  "name": "newxkitbot",
+  "version": "1.0.0",
+  "description": "A bot that acomplishes multiple tasks for the new-xkit team",
+  "main": "main.js",
+  "dependencies": {
+    "irc": "^0.3.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/new-xkit/NewXKitBot.git"
+  },
+  "keywords": [
+    "XKit",
+    "new-xkit",
+    "bot"
+  ],
+  "author": "Wolvan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/new-xkit/NewXKitBot/issues"
+  },
+  "homepage": "https://github.com/new-xkit/NewXKitBot#readme"
+}

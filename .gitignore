@@ -1,0 +1,7 @@
+# Don't commit
+
+# Installed Node Modules. Commit the package.json instead
+node_modules/
+
+# Bot Config: Contains highly sensitive data, NEVER Commit
+newxkitbot.conf.js
