@@ -38,28 +38,28 @@ module.exports = function(Config) {
 	this.freenode.addListener('join' + Config.IRC_Channel, function(nick, message) {
 		freenode.send("NAMES", Config.IRC_Channel);
 		if (freenode.nick === nick) { return; }
-		gitter.say(Config.Gitter_Channel, "<" + nick + "> has joined.");
+		gitter.say(Config.Gitter_Channel, "*" + nick + " has joined.*");
 		freenode.say(nick, Config.IRC_WelcomeMsg);
 	});
 	this.freenode.addListener('kick' + Config.IRC_Channel, function(nick, by, reason, message) {
 		if (freenode.nick === nick) { return; }
-		gitter.say(Config.Gitter_Channel, "<" + nick + "> has been kicked by " + by + " for '" + reason + "'.");
+		gitter.say(Config.Gitter_Channel, "*" + nick + " has been kicked by " + by + " for '" + reason + "'.*");
 		freenode.send("NAMES", Config.IRC_Channel);
 	});
 	this.freenode.addListener('part' + Config.IRC_Channel, function(nick, reason, message) {
 		if (freenode.nick === nick) { return; }
-		gitter.say(Config.Gitter_Channel, "<" + nick + "> has left.");
+		gitter.say(Config.Gitter_Channel, "*" + nick + " has left.*");
 		freenode.send("NAMES", Config.IRC_Channel);
 	});
 	this.freenode.addListener('quit', function(nick, reason, channels, message) {
 		if (freenode.nick === nick) { return; }
-		gitter.say(Config.Gitter_Channel, "<" + nick + "> has left.");
+		gitter.say(Config.Gitter_Channel, "*" + nick + " has left.*");
 		freenode.send("NAMES", Config.IRC_Channel);
 	});
 	
 	this.freenode.addListener('nick', function(old, newnick, channels, message) {
 		if (freenode.nick === newnick) { return; }
-		gitter.say(Config.Gitter_Channel, "<" + old + "> is now known as <" + newnick + ">.");
+		gitter.say(Config.Gitter_Channel, "*" + old + "* is now known as *" + newnick + "*.");
 	});
 	
 	this.freenode.addListener('names' + Config.IRC_Channel, function(nicks) {
