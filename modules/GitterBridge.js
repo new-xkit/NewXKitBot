@@ -18,7 +18,7 @@ module.exports = function(Config) {
 		});
 
 		this.freenode.addListener('message' + Config.IRC_Channel, function (from, message) {
-			gitter.say(Config.IRC_Channel, "<" + from + "> " + message);
+			gitter.say(Config.IRC_Channel, "`" + from + "` " + message);
 		});
 
 		this.freenode.addListener('registered', function(message) {
