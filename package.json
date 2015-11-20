@@ -1,26 +1,32 @@
 {
   "name": "newxkitbot",
-  "version": "1.0.0",
-  "description": "A bot that acomplishes multiple tasks for the new-xkit team",
+  "version": "2.0.0",
+  "description": "The little helping hand for the New-XKit Team",
   "main": "main.js",
   "dependencies": {
-    "irc": "^0.3.12"
+    "extend": "^3.0.0",
+    "irc": "^0.4.0",
+    "node-gitter": "^1.2.8",
+    "octonode": "^0.7.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node main.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/new-xkit/NewXKitBot.git"
   },
   "keywords": [
-    "XKit",
-    "new-xkit",
-    "bot"
+    "bot",
+    "new",
+    "xkit",
+    "gitter",
+    "irc",
+    "bridge"
   ],
-  "author": "Wolvan",
-  "license": "GPL-3.0",
+  "author": "Wolvan <wolvan1@gmail.com> (http://www.github.com/Wolvan)",
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/new-xkit/NewXKitBot/issues"
   },
